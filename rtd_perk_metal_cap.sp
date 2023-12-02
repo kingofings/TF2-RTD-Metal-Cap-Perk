@@ -109,11 +109,7 @@ float damagePosition[3], int damagecustom)
 
 void OnPreThink(int client)
 { 
-    if (GetEntProp(client, Prop_Send, "m_nWaterLevel") >= 2)
-    {
-        ApplyAbsVelImpulse(client, { 0.0, 0.0, -25.0 });
-        return;
-    }
+    if (GetEntProp(client, Prop_Send, "m_nWaterLevel") >= 2)ApplyAbsVelImpulse(client, { 0.0, 0.0, -25.0 });
 }
 
 public void OnClientPutInServer(int client)
