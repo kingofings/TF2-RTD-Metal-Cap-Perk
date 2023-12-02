@@ -11,6 +11,7 @@
 #define PLUGIN_VERSION "0.0.1"
 #define SOUND_METAL_CAP "kingo/rtd/metal_cap.mp3"
 #define SOUND_METAL_CAP_STEP "kingo/rtd/metal_cap_step.mp3"
+#define PERK_TIME 40
 
 bool g_Active[MAXPLAYERS + 1] = { false, ... };
 
@@ -65,7 +66,7 @@ void RegisterPerk()
         .SetName("Metal Cap")
         .SetGood(true)
         .SetSound(SOUND_METAL_CAP)
-        .SetTime(40)
+        .SetTime(PERK_TIME)
         .SetCall(MetalCap_Call);
 }
 
